@@ -27,7 +27,7 @@ if [ -n "${CPPFLAGS}" ]; then
   echo "CPPFLAGS=${CPPFLAGS}"
 fi
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc  compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \
@@ -40,7 +40,7 @@ g++ $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
   -o compact_lang_det_test_full $LDFLAGS
 echo "  compact_lang_det_test_full compiled"
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS cld2_unittest_full.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS cld2_unittest_full.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc  compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \
@@ -53,7 +53,7 @@ g++ $CFLAGS $CPPFLAGS $CXXFLAGS cld2_unittest_full.cc \
   -o cld2_unittest_full $LDFLAGS
 echo "  cld2_unittest_full compiled"
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS -Davoid_utf8_string_constants cld2_unittest_full.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS -Davoid_utf8_string_constants cld2_unittest_full.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc  compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \

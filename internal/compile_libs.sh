@@ -27,7 +27,7 @@ if [ -n "${CPPFLAGS}" ]; then
   echo "CPPFLAGS=${CPPFLAGS}"
 fi
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS -shared -fPIC \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS -shared -fPIC \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \
@@ -39,7 +39,7 @@ g++ $CFLAGS $CPPFLAGS $CXXFLAGS -shared -fPIC \
   cld2_generated_distinctoctachrome.cc  cld_generated_score_quad_octa_2.cc  \
   -o libcld2.so $LDFLAGS 
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS -shared -fPIC \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS -shared -fPIC \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \

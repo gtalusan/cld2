@@ -27,7 +27,7 @@ if [ -n "${CPPFLAGS}" ]; then
   echo "CPPFLAGS=${CPPFLAGS}"
 fi
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc  compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \
@@ -40,7 +40,7 @@ g++ $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
   -o compact_lang_det_test_chrome_2 $LDFLAGS
 echo "  compact_lang_det_test_chrome_2 compiled"
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc  compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \
@@ -54,7 +54,7 @@ g++ $CFLAGS $CPPFLAGS $CXXFLAGS compact_lang_det_test.cc \
 echo "  compact_lang_det_test_chrome_16 compiled"
 
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS cld2_unittest.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS cld2_unittest.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc  compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \
@@ -67,7 +67,7 @@ g++ $CFLAGS $CPPFLAGS $CXXFLAGS cld2_unittest.cc \
   -o cld2_unittest_chrome_2 $LDFLAGS
 echo "  cld2_unittest_chrome_2 compiled"
 
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS -Davoid_utf8_string_constants cld2_unittest.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS -Davoid_utf8_string_constants cld2_unittest.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc  compact_lang_det_hint_code.cc \
   compact_lang_det_impl.cc  debug.cc fixunicodevalue.cc \
   generated_entities.cc  generated_language.cc generated_ulscript.cc  \

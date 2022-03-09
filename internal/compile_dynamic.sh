@@ -28,7 +28,7 @@ if [ -n "${CPPFLAGS}" ]; then
 fi
 
 # The data tool, which can be used to read and write CLD2 dynamic data files
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS cld2_dynamic_data_tool.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS cld2_dynamic_data_tool.cc \
   cld2_dynamic_data.cc \
   cld2_dynamic_data_extractor.cc \
   cld2_dynamic_data_loader.cc \
@@ -45,7 +45,7 @@ g++ $CFLAGS $CPPFLAGS $CXXFLAGS cld2_dynamic_data_tool.cc \
 echo "  cld2_dynamic_data_tool compiled"
 
 # Tests for Chromium flavored dynamic CLD2
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS -D CLD2_DYNAMIC_MODE compact_lang_det_test.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS -D CLD2_DYNAMIC_MODE compact_lang_det_test.cc \
   cld2_dynamic_data.cc \
   cld2_dynamic_data_extractor.cc \
   cld2_dynamic_data_loader.cc \
@@ -59,7 +59,7 @@ echo "  compact_lang_det_dynamic_test_chrome compiled"
 
 
 # Unit tests, in dynamic mode
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS -g3 -D CLD2_DYNAMIC_MODE cld2_unittest.cc \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS -g3 -D CLD2_DYNAMIC_MODE cld2_unittest.cc \
   cld2_dynamic_data.cc \
   cld2_dynamic_data_loader.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc  compact_lang_det_hint_code.cc \
@@ -71,7 +71,7 @@ g++ $CFLAGS $CPPFLAGS $CXXFLAGS -g3 -D CLD2_DYNAMIC_MODE cld2_unittest.cc \
 echo "  cld2_dynamic_unittest compiled"
 
 # Shared library, in dynamic mode
-g++ $CFLAGS $CPPFLAGS $CXXFLAGS -shared -fPIC -D CLD2_DYNAMIC_MODE \
+$CXX $CFLAGS $CPPFLAGS $CXXFLAGS -shared -fPIC -D CLD2_DYNAMIC_MODE \
   cld2_dynamic_data.cc \
   cld2_dynamic_data_loader.cc \
   cldutil.cc cldutil_shared.cc compact_lang_det.cc compact_lang_det_hint_code.cc \
